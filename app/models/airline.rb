@@ -1,3 +1,3 @@
-Class Airline < ActiveRecord::Base
+class Airline < ActiveRecord::Base
 
 end
