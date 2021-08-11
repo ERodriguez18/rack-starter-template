@@ -39,7 +39,8 @@ end
       airline = Airline.find(id)
       airline.update(body)
       return [202, {'Content-Type' => 'application/json'}, [airline.to_json]]
-
+    end
+  end
   #airline delete 
 
   if req.path.match('/airlines/') && req.delete?
