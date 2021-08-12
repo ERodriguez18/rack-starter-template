@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_11_201256) do
+ActiveRecord::Schema.define(version: 2021_08_12_161949) do
 
   create_table "airlines", force: :cascade do |t|
     t.string "name"
@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 2021_08_11_201256) do
     t.string "title"
     t.string "description"
     t.integer "score"
+    t.integer "airline_id"
+    t.index ["airline_id"], name: "index_reviews_on_airline_id"
   end
 
 end

@@ -33,3 +33,18 @@ Airline.create([
   puts 'Airlines Seeded'
 
   puts 'Seeding Complete'
+
+
+  Review.destroy_all
+
+  airline = Airline.all
+
+  review_scores = ['1', '2', '3', '4', '5']
+
+  5.times do 
+    Review.create(name: Faker::Name.first_name, title: Faker::Lorem.sentence, description: Faker::Lorem.paragraph, score: review_scores.sample)
+  end 
+
+  puts 'Reviews seeded'
+
+  puts 'Seeding complete'
